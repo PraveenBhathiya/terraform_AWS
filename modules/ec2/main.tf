@@ -26,7 +26,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0d5d9d301c853a04a"
+  ami           = "ami-0f5ee92e2d63afc18"
   instance_type = var.instance_type
   subnet_id     = var.subnet_id
   key_name      = var.key_name
