@@ -15,7 +15,7 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-    default = "my-keypair"  
+    default = "terraform-keypair"  
 }
 
 variable "bucket_name" {
