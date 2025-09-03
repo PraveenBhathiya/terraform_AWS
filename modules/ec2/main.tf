@@ -26,11 +26,12 @@ resource "aws_security_group" "web_sg" {
 }
 
 resource "aws_instance" "web" {
-  ami           = "ami-0f5ee92e2d63afc18"
+  ami           = "ami-0f5ee92e2d63afc18"  # Ubuntu 20.04 in ap-south-1
   instance_type = var.instance_type
   subnet_id     = var.subnet_id
   key_name      = var.key_name
 
+  # Attach security group
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
